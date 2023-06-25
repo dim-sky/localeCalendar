@@ -137,10 +137,16 @@ export class AppComponent {
         LTS: 'HH:mm:ss',
       },
     },
+    //When i am modifying the following i see the changes reflected in my app.
+    //Which means that i am correctly overriding the locale i am using.
+    AgendaView: {
+      Agenda: 'temp',
+    },
   };
 
   ngOnInit() {
     LocaleHelper.publishLocale('En', this.locale);
+    console.log(LocaleHelper.locale);
     //LocaleManager.applyLocale('En', this.locale);
     //LocaleHelper.publishLocale();
 
